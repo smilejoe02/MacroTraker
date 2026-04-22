@@ -105,7 +105,8 @@ public class SetGoalsController {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/view/dashboard.fxml"));
             Stage stage = (Stage) caloriesGoalField.getScene().getWindow();
-            stage.setScene(new Scene(root, 1200, 800));
+            stage.setScene(new Scene(root));
+            stage.setMaximized(true);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();

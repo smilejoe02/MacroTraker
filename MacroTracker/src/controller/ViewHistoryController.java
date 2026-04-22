@@ -96,8 +96,9 @@ public class ViewHistoryController {
     private void handleBackToDashboard(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/view/dashboard.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root, 950, 728));
+        stage.setScene(new Scene(root));
         stage.setTitle("MacroTracker Dashboard");
+        stage.setMaximized(true);
         stage.show();
     }
 }

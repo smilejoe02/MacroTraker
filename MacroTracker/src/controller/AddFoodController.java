@@ -62,6 +62,7 @@ public class AddFoodController {
                     || mealType == null
                     || entryDatePicker.getValue() == null) {
 
+                messageLabel.setStyle("-fx-text-fill: red;");
                 messageLabel.setText("Please fill in all fields.");
                 return;
             }
@@ -89,6 +90,7 @@ public class AddFoodController {
 
             stmt.executeUpdate();
 
+            messageLabel.setStyle("-fx-text-fill: green;");
             messageLabel.setText("Food added successfully.");
 
             foodNameField.clear();
@@ -100,9 +102,11 @@ public class AddFoodController {
             entryDatePicker.setValue(null);
 
         } catch (NumberFormatException e) {
+            messageLabel.setStyle("-fx-text-fill: red;");
             messageLabel.setText("Please enter valid numbers.");
         } catch (Exception e) {
             e.printStackTrace();
+            messageLabel.setStyle("-fx-text-fill: red;");
             messageLabel.setText("Error saving food.");
         }
     }
@@ -112,10 +116,12 @@ public class AddFoodController {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/view/dashboard.fxml"));
             Stage stage = (Stage) foodNameField.getScene().getWindow();
-            stage.setScene(new Scene(root, 1200, 800));
+            stage.setScene(new Scene(root));
+            stage.setMaximized(true);
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
+            messageLabel.setStyle("-fx-text-fill: red;");
             messageLabel.setText("Could not return to dashboard.");
         }
     }

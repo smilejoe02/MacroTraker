@@ -37,9 +37,10 @@ public class LoginController {
         try {
             Stage stage = (Stage) usernameField.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/dashboard.fxml"));
-            Scene scene = new Scene(loader.load(), 700, 450);
+            Scene scene = new Scene(loader.load());
             stage.setTitle("MacroTracker Dashboard");
             stage.setScene(scene);
+            stage.setMaximized(true);
         } catch (IOException e) {
             messageLabel.setText("Could not open dashboard.");
             e.printStackTrace();

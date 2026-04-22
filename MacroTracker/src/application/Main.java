@@ -27,10 +27,11 @@ public class Main extends Application {
                 getClass().getResource("/view/login.fxml")
         );
 
-        Scene scene = new Scene(loader.load(), 400, 300);
+        Scene scene = new Scene(loader.load());
 
         stage.setTitle("MacroTracker Login");
         stage.setScene(scene);
+        stage.setMaximized(true);
         stage.show();
     }
 

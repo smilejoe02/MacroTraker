@@ -356,6 +356,7 @@ public class DashboardController {
             Stage stage = (Stage) caloriesLabel.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setTitle(title);
+            stage.setMaximized(true);
             stage.show();
 
         } catch (Exception e) {
