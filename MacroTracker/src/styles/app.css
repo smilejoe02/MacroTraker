@@ -1,0 +1,47 @@
+.page {
+    -fx-background-color: linear-gradient(to bottom right, #f8fafc, #eef4f8);
+    -fx-font-family: "Arial";
+}
+
+.page-title {
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e293b;
+}
+
+.page-subtitle {
+    -fx-font-size: 15px;
+    -fx-text-fill: #64748b;
+}
+
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-border-color: #dbe4ee;
+    -fx-padding: 18;
+}
+
+.primary-button {
+    -fx-background-color: #22c55e;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12;
+}
+
+.secondary-button {
+    -fx-background-color: #e2e8f0;
+    -fx-text-fill: #1e293b;
+    -fx-background-radius: 12;
+}
+
+.danger-button {
+    -fx-background-color: #ef4444;
+    -fx-text-fill: white;
+    -fx-background-radius: 12;
+}
+.body-text {
+    -fx-font-size: 15px;
+    -fx-text-fill: #334155;
+    -fx-line-spacing: 3px;
+}

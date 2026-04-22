@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.SetGoalsController"
+      spacing="18"
+      stylesheets="@../styles/app.css"
+      styleClass="page">
+
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+
+    <Label text="Set Daily Goals" styleClass="page-title"/>
+    <Label text="Enter your target calories and macros for the day." styleClass="page-subtitle"/>
+
+    <VBox spacing="14" styleClass="card" maxWidth="500">
+        <Label text="Calories Goal" styleClass="field-label"/>
+        <TextField fx:id="caloriesGoalField" promptText="Example: 2200" styleClass="clean-field"/>
+
+        <Label text="Protein Goal (g)" styleClass="field-label"/>
+        <TextField fx:id="proteinGoalField" promptText="Example: 180" styleClass="clean-field"/>
+
+        <Label text="Carbs Goal (g)" styleClass="field-label"/>
+        <TextField fx:id="carbsGoalField" promptText="Example: 220" styleClass="clean-field"/>
+
+        <Label text="Fat Goal (g)" styleClass="field-label"/>
+        <TextField fx:id="fatGoalField" promptText="Example: 70" styleClass="clean-field"/>
+
+        <Label fx:id="messageLabel" text="" styleClass="success-text"/>
+
+        <HBox spacing="12">
+            <Button text="Save Goals" onAction="#handleSaveGoals" styleClass="primary-button"/>
+            <Button text="Back to Dashboard" onAction="#handleBackToDashboard" styleClass="secondary-button"/>
+        </HBox>
+    </VBox>
+</VBox>

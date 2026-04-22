@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.DashboardController"
+      spacing="18"
+      style="-fx-background-color: #eef4f8; -fx-padding: 20;">
+
+    <children>
+
+        <Label text="MacroTracker"
+               style="-fx-font-size: 38px; -fx-font-weight: bold; -fx-text-fill: #1f3349;" />
+
+        <Label fx:id="welcomeLabel"
+               text="Welcome, Joe!"
+               style="-fx-font-size: 16px; -fx-text-fill: #5f7690;" />
+
+        <HBox spacing="20">
+            <children>
+
+                <VBox spacing="12"
+                      HBox.hgrow="ALWAYS"
+                      style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #d9e5ef; -fx-padding: 20;">
+                    <children>
+                        <Label text="Today's Macros"
+                               style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #26384a;" />
+
+                        <HBox spacing="35">
+                            <children>
+                                <VBox spacing="6">
+                                    <children>
+                                        <Label text="Calories" style="-fx-font-size: 15px; -fx-text-fill: #4d5f73;" />
+                                        <Label fx:id="caloriesLabel" text="0"
+                                               style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #1f3349;" />
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="6">
+                                    <children>
+                                        <Label text="Protein" style="-fx-font-size: 15px; -fx-text-fill: #4d5f73;" />
+                                        <Label fx:id="proteinLabel" text="0.0 g"
+                                               style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #1f3349;" />
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="6">
+                                    <children>
+                                        <Label text="Carbs" style="-fx-font-size: 15px; -fx-text-fill: #4d5f73;" />
+                                        <Label fx:id="carbsLabel" text="0.0 g"
+                                               style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #1f3349;" />
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="6">
+                                    <children>
+                                        <Label text="Fat" style="-fx-font-size: 15px; -fx-text-fill: #4d5f73;" />
+                                        <Label fx:id="fatLabel" text="0.0 g"
+                                               style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #1f3349;" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+
+                <VBox spacing="12"
+                      HBox.hgrow="ALWAYS"
+                      style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #d9e5ef; -fx-padding: 20;">
+                    <children>
+                        <Label text="Daily Goals"
+                               style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #26384a;" />
+
+                        <HBox spacing="28">
+                            <children>
+                                <VBox spacing="6">
+                                    <children>
+                                        <Label text="Calories Goal" style="-fx-font-size: 15px; -fx-text-fill: #4d5f73;" />
+                                        <Label fx:id="calorieGoalLabel" text="0"
+                                               style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1f3349;" />
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="6">
+                                    <children>
+                                        <Label text="Protein Goal" style="-fx-font-size: 15px; -fx-text-fill: #4d5f73;" />
+                                        <Label fx:id="proteinGoalLabel" text="0.0 g"
+                                               style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1f3349;" />
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="6">
+                                    <children>
+                                        <Label text="Carbs Goal" style="-fx-font-size: 15px; -fx-text-fill: #4d5f73;" />
+                                        <Label fx:id="carbsGoalLabel" text="0.0 g"
+                                               style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1f3349;" />
+                                    </children>
+                                </VBox>
+
+                                <VBox spacing="6">
+                                    <children>
+                                        <Label text="Fat Goal" style="-fx-font-size: 15px; -fx-text-fill: #4d5f73;" />
+                                        <Label fx:id="fatGoalLabel" text="0.0 g"
+                                               style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1f3349;" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+
+            </children>
+        </HBox>
+
+        <VBox spacing="12"
+              style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #d9e5ef; -fx-padding: 20;">
+            <children>
+                <Label text="Calories Burned"
+                       style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #26384a;" />
+
+                <HBox spacing="12">
+                    <children>
+                        <TextField fx:id="caloriesBurnedField"
+                                   promptText="Enter calories burned"
+                                   style="-fx-background-radius: 12; -fx-border-radius: 12; -fx-border-color: #cdd9e3; -fx-padding: 8; -fx-font-size: 14px;" />
+
+                        <Button text="Add Burned"
+                                onAction="#handleAddBurned"
+                                style="-fx-background-color: #10c64a; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 14; -fx-padding: 8 18 8 18;" />
+
+                        <Button text="Refresh"
+                                onAction="#handleRefresh"
+                                style="-fx-background-color: #dbe4ec; -fx-text-fill: #1f3349; -fx-font-size: 14px; -fx-background-radius: 14; -fx-padding: 8 18 8 18;" />
+                    </children>
+                </HBox>
+
+                <Label text="Burned Today"
+                       style="-fx-font-size: 15px; -fx-text-fill: #4d5f73;" />
+
+                <Label fx:id="burnedTodayLabel"
+                       text="0"
+                       style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #1f3349;" />
+            </children>
+        </VBox>
+
+        <VBox spacing="12"
+              style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #d9e5ef; -fx-padding: 20;">
+            <children>
+                <Label text="Latest Food Added"
+                       style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #26384a;" />
+
+                <TextArea fx:id="latestFoodArea"
+                          editable="false"
+                          wrapText="true"
+                          prefHeight="120"
+                          style="-fx-font-size: 15px; -fx-text-fill: #1f3349; -fx-control-inner-background: white; -fx-background-color: transparent;" />
+            </children>
+        </VBox>
+
+        <VBox spacing="12"
+              style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #d9e5ef; -fx-padding: 20;">
+            <children>
+                <Label text="Today's Food Log"
+                       style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #26384a;" />
+
+                <HBox spacing="25">
+                    <children>
+
+                        <VBox spacing="8" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label text="Breakfast"
+                                       style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #3d5268;" />
+                                <TextArea fx:id="breakfastArea"
+                                          editable="false"
+                                          wrapText="true"
+                                          prefHeight="170"
+                                          prefWidth="260"
+                                          style="-fx-font-size: 14px; -fx-text-fill: #1f3349; -fx-control-inner-background: white; -fx-background-color: transparent;" />
+                            </children>
+                        </VBox>
+
+                        <VBox spacing="8" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label text="Lunch"
+                                       style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #3d5268;" />
+                                <TextArea fx:id="lunchArea"
+                                          editable="false"
+                                          wrapText="true"
+                                          prefHeight="170"
+                                          prefWidth="260"
+                                          style="-fx-font-size: 14px; -fx-text-fill: #1f3349; -fx-control-inner-background: white; -fx-background-color: transparent;" />
+                            </children>
+                        </VBox>
+
+                        <VBox spacing="8" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label text="Dinner"
+                                       style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #3d5268;" />
+                                <TextArea fx:id="dinnerArea"
+                                          editable="false"
+                                          wrapText="true"
+                                          prefHeight="170"
+                                          prefWidth="260"
+                                          style="-fx-font-size: 14px; -fx-text-fill: #1f3349; -fx-control-inner-background: white; -fx-background-color: transparent;" />
+                            </children>
+                        </VBox>
+
+                        <VBox spacing="8" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Label text="Snack"
+                                       style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #3d5268;" />
+                                <TextArea fx:id="snackArea"
+                                          editable="false"
+                                          wrapText="true"
+                                          prefHeight="170"
+                                          prefWidth="260"
+                                          style="-fx-font-size: 14px; -fx-text-fill: #1f3349; -fx-control-inner-background: white; -fx-background-color: transparent;" />
+                            </children>
+                        </VBox>
+
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+
+        <VBox spacing="12"
+              style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #d9e5ef; -fx-padding: 20;">
+            <children>
+                <Label text="Quick Actions"
+                       style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #26384a;" />
+
+                <HBox spacing="14">
+                    <children>
+                        <Button text="Add Food"
+                                onAction="#handleAddFood"
+                                style="-fx-background-color: #10c64a; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 16; -fx-padding: 10 18 10 18;" />
+
+                        <Button text="View History"
+                                onAction="#handleViewHistory"
+                                style="-fx-background-color: #dbe4ec; -fx-text-fill: #1f3349; -fx-font-size: 14px; -fx-background-radius: 16; -fx-padding: 10 18 10 18;" />
+
+                        <Button text="Set Goals"
+                                onAction="#handleSetGoals"
+                                style="-fx-background-color: #dbe4ec; -fx-text-fill: #1f3349; -fx-font-size: 14px; -fx-background-radius: 16; -fx-padding: 10 18 10 18;" />
+
+                        <Button text="Reset Day"
+                                onAction="#handleResetDay"
+                                style="-fx-background-color: #ff1f57; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 16; -fx-padding: 10 18 10 18;" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+
+    </children>
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20" />
+    </padding>
+</VBox>
