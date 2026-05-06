@@ -2,20 +2,29 @@ package model;
 
 public class FoodEntry {
 
+    private int entryId;
     private String foodName;
     private int calories;
     private double protein;
     private double carbs;
     private double fat;
+    private String mealType;
     private String entryDate;
 
-    public FoodEntry(String foodName, int calories, double protein, double carbs, double fat, String entryDate) {
+    public FoodEntry(int entryId, String foodName, int calories, double protein,
+                     double carbs, double fat, String mealType, String entryDate) {
+        this.entryId = entryId;
         this.foodName = foodName;
         this.calories = calories;
         this.protein = protein;
         this.carbs = carbs;
         this.fat = fat;
+        this.mealType = mealType;
         this.entryDate = entryDate;
+    }
+
+    public int getEntryId() {
+        return entryId;
     }
 
     public String getFoodName() {
@@ -36,6 +45,10 @@ public class FoodEntry {
 
     public double getFat() {
         return fat;
+    }
+
+    public String getMealType() {
+        return mealType;
     }
 
     public String getEntryDate() {
